@@ -1,0 +1,11 @@
+cluster.name: kubernetes-logging
+node.master: ${NODE_MASTER}
+node.data: ${NODE_DATA}
+transport.tcp.port: ${TRANSPORT_PORT}
+http.port: ${HTTP_PORT}
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.minimum_master_nodes: 2
+indices.fielddata.cache.size: 20%
+path.data: /data
+# es master lists: ["master1", "master2:port", "master3[port1-port2]"]
+discovery.zen.ping.unicast.hosts: []
